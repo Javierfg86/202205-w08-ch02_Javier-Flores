@@ -7,10 +7,10 @@
     "scripts": {
         "start": "run-p start:ts start:build",
         "start:ts": "tsc --watch",
-        "start:build": "cross-env PORT=3400 nodemon ./dist/index.js",
+        "start:build": "cross-env PORT=3800 nodemon ./dist/index.js",
         "test": "jest --watchAll --coverage"
     },
-    "author": "Alejandro Cerezo",
+    "author": "Javier",
     "license": "ISC",
     "dependencies": {
         "@types/bcryptjs": "^2.4.2",
