@@ -2,7 +2,7 @@ import http from 'http';
 import { AddressInfo } from 'net';
 import { app } from './app.js';
 
-const PORT = process.env.PORT || 3200;
+const PORT = process.env.PORT || 3800;
 
 const onError = (err: Error) => {
     console.log(err.message);

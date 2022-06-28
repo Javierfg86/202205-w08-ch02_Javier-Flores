@@ -15,11 +15,7 @@ export class UserController<T> extends BasicController<T> {
     getAllController = async (req: Request, resp: Response) => {
         req;
         resp.setHeader('Content-type', 'application/json');
-        resp.send(
-            await this.model.find().populate('tasks', {
-                responsible: 0,
-            })
-        );
+        resp.send(await this.model.find());
     };
 
     getController = async (
@@ -31,11 +27,7 @@ export class UserController<T> extends BasicController<T> {
         console.log('Search for id:', req.params.id);
         let result;
         try {
-            result = await this.model
-                .findById(req.params.id)
-                .populate('tasks', {
-                    responsible: 0,
-                });
+            result = await this.model.findById(req.params.id);
         } catch (error) {
             next(error);
             return;
